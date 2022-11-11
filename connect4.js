@@ -105,6 +105,13 @@ class Game {
   /** handles start new game button click */
   startButtonClick(evt) {
     this.gameOn = true
+    this.board.map((row) => row.map((cell) => cell = null))
+    const board = document.getElementById("board");
+    const divs = board.querySelectorAll(".piece");
+    const divsArray = Array.from(divs);
+    for(let divs of divsArray){
+      divs.removeChild();
+    }
   }
 
   /** handleClick: handle click of column top to play piece */
